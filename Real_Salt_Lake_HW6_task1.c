@@ -33,5 +33,25 @@ int main(int argc, char *argv[])
 
 
 /* Function Defenitions */
+void Usage(void)
+{
+	return;
+}
+void GetRec(double*x,double*y)
+{
+	return;
+}
+void Polar(double x, double y, double*r, double*theta)
+{
+	return;
+}
+void Showit(double radius, double angle)
+{
+	return;
+}
+int AskQuestion(void)
+{
+	return 0;
+}
 
 
