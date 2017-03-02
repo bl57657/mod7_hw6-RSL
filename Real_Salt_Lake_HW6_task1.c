@@ -13,6 +13,7 @@
  */
 #include <stdio.h>		/* For Standard I/O */
 #include <stdlib.h>
+#include <math.h>
 
 /* Function Prototypes */
 void Usage(void);
