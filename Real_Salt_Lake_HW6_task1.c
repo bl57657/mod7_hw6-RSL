@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	
 	printf("The Polar coordinates are: \n");
 	printf("  Distance from origin: \n");
-	printf("  Angle(degrees) from x-axis: \n);
+	printf("  Angle(degrees) from x-axis: \n");
 
 	return 0;
 }
