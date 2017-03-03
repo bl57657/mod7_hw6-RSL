@@ -25,9 +25,12 @@ int AskQuestion(void);
 /* Main Program */
 int main(int argc, char *argv[])
 {
-	
+	float p1, p2;
+	r = sqrt((x*x) + (y*y));
+
 	printf("The Polar coordinates are: \n");
-	printf("  Distance from origin: \n");
+	scanf("%f%f", &p1, &p2);
+	printf("  Distance from origin: "r"\n");
 	printf("  Angle(degrees) from x-axis: \n");
 
 	return 0;
