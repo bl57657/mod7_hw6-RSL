@@ -46,16 +46,8 @@ void GetRec(double* x, double* y)
 }
 void Polar(double* x, double* y, double*r, double* theta)
 {
-	if(x == 0)
-	{
-		//printf("X value cant be zero, try again\n");
-	Usage();
-	}
-	else
-	{
 	*r = sqrt( (*x) * (*x) + (*y) * (*y) );
-	*theta = atan( (*y) / (*x) );
-	}
+	*theta = atan( (*y) / (*x) );	
 	return;
 }
 void Showit(double* r, double* theta)
