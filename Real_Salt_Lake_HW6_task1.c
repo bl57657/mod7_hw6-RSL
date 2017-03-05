@@ -16,47 +16,48 @@
 #include <math.h>
 
 /* Function Prototypes */
-void Usage(void);
-void GetRec(double*x,double*y);
-void Polar(double x, double y, double*r, double*theta);
-void Showit(double radius, double angle);
-int AskQuestion(void);
+//void Usage(void);
+void GetRec(double* x, double* y);
+void Polar(double* x, double* y, double* r, double* theta);
+void Showit(double* r, double* theta);
+//int AskQuestion(void);
 
 /* Main Program */
 int main(int argc, char *argv[])
 {
-	float p1, p2;
-	r = sqrt((x*x) + (y*y));
+	double x, y, r, theta;
 
-	printf("The Polar coordinates are: \n");
-	scanf("%f%f", &p1, &p2);
-	printf("  Distance from origin: "r"\n");
-	printf("  Angle(degrees) from x-axis: \n");
+	GetRec(&x, &y);
+	Polar(&x, &y, &r, &theta);
+	Showit(&r, &theta);
 
 	return 0;
 }
-
-
 /* Function Defenitions */
-void Usage(void)
+void GetRec(double* x, double* y)
 {
+	printf("Enter the coordinate for Polar conversion(x & y): ");
+	scanf("%lf%lf", &*x, &*y);
 	return;
 }
-void GetRec(double*x,double*y)
+void Polar(double* x, double* y, double*r, double* theta)
 {
+	if(x == 0)
+	{
+		printf("X value cant be zero, try again\n");
+	}
+	else
+	{
+	*r = sqrt( (*x) * (*x) + (*y) * (*y) );
+	*theta = atan( (*y) / (*x) );
+	}
 	return;
 }
-void Polar(double x, double y, double*r, double*theta)
+void Showit(double* r, double* theta)
 {
+	printf("Polar R: %lf, Theta: %lf\n", *r, *theta);
 	return;
 }
-void Showit(double radius, double angle)
-{
-	return;
-}
-int AskQuestion(void)
-{
-	return 0;
-}
+
 
 
