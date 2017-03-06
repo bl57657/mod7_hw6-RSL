@@ -26,14 +26,18 @@ int AskQuestion(void);
 int main(int argc, char *argv[])
 {
 	double x, y, r, theta;
-	if(argc !=3)
-{
-	Usage();
-}
+//	if(argc !=3)
+//{
+//	Usage();
+//}
 	GetRec(&x, &y);
+	if(argc != 3)
+	{
+//	Usage();
+	}
 	Polar(&x, &y, &r, &theta);
 	Showit(&r, &theta);
-
+	AskQuestion();
 	return(0);
 }
 /* Function Defenitions */
@@ -57,7 +61,7 @@ void Showit(double* r, double* theta)
 }
 void Usage(void)
 {
-	printf("Usage: ./Program name <x> <y> \n");
+	printf("Usage: You Must enter  <x> space <y> \n");
 	printf("Help: You MUST have two and only two input values.\n");
 	printf("Help: Inputs must be numerical values.\n");
 	return;
@@ -68,6 +72,11 @@ int AskQuestion(void)
 	
 	printf("Would you like to perform another calculation? <Yes=1> <No=0> \n");
 	scanf("%i",&a); 
+	if(a == 1)
+	{
+	return(1);
+	}
 	return(0);
 }
+
 
