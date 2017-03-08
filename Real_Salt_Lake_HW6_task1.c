@@ -60,8 +60,8 @@ int main(int argc, char *argv[])
 			{
 				printf("BAD INPUT, TRY AGAIN");
 			}
-			while(K != 0);
 		}
+			while(K != 0);
 	}
 	return(0);
 }
