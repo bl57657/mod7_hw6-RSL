@@ -26,18 +26,43 @@ int AskQuestion(void);
 int main(int argc, char *argv[])
 {
 	double x, y, r, theta;
-//	if(argc !=3)
-//{
-//	Usage();
-//}
-	GetRec(&x, &y);
+	float K;
+	//	if(argc !=3)
+	//{
+	//	Usage();
+	//}
 	if(argc != 3)
 	{
-//	Usage();
+		Usage();
+		x = atof(argv[1]);
+		y = atof(argv[2]);
 	}
-	Polar(&x, &y, &r, &theta);
-	Showit(&r, &theta);
-	AskQuestion();
+	else
+	{
+		Polar(&x, &y, &r, &theta);
+		Showit(&r, &theta);
+		do
+		{
+			K = AskQuestion();
+			AskQuestion();
+			if(K == 1)
+			{
+				GetRec(&x, &y);
+				Polar(&x, &y, &r, &theta);
+				Showit(&r, &theta);
+			}
+			else if(K == 0)
+			{
+				printf("DONE!");
+				break;
+			}
+			else
+			{
+				printf("BAD INPUT, TRY AGAIN");
+			}
+			while(K != 0)
+		}
+	}
 	return(0);
 }
 /* Function Defenitions */
@@ -68,8 +93,7 @@ void Usage(void)
 }
 int AskQuestion(void)
 {
-	int a;
-	
+	int a;	
 	printf("Would you like to perform another calculation? <Yes=1> <No=0> \n");
 	scanf("%i",&a); 
 	if(a == 1)
